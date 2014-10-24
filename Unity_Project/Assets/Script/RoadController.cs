@@ -3,9 +3,14 @@ using System.Collections;
 
 public class RoadController : MonoBehaviour 
 {
-	public GameObject player;
+    private GameObject player;
 
-	void OnTriggerEnter(Collider other)
+	void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
+	}
+
+	void OnTriggerStay(Collider other)
 	{
 		if(other.gameObject == player)
 		{
