@@ -7,16 +7,11 @@ public class DistorierController : MonoBehaviour
 	{
 		if(other.tag == "Player")
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(Application.loadedLevel);
 			return;
 		}
-		if (other.gameObject.transform.parent){
-			Destroy (other.gameObject.transform.parent.gameObject);
-		}
-		else{
-			Destroy (other.gameObject);
-		}
 
+		Destroy (other.transform.parent.gameObject);
 	}
 
 }

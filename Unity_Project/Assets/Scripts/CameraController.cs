@@ -9,6 +9,10 @@ public class CameraController : MonoBehaviour
 	void Start()
 	{
 		offSet = transform.position;
+		if(player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player");
+		}
 	}
 
 	void Update()

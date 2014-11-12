@@ -10,7 +10,7 @@ public class RoadController : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
-	void OnTriggerStay(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject == player)
 		{
